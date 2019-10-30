@@ -152,7 +152,7 @@ class SliderCarousel {
     const checkResponse = () => {
       const widthWindow = document.documentElement.clientWidth;
       if(widthWindow < maxResponse){
-        for(let i in allResponse){
+        for(let i = 0; i < allResponse.length; i++){
           if(widthWindow < allResponse[i]){
             this.slidesToShow = this.responsive[i].slideToShow;
             this.options.widthSlide = Math.floor(100 / this.slidesToShow);
